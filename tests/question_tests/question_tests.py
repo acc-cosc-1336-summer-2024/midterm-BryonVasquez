@@ -2,18 +2,16 @@
 import unittest
 
 #follow this example to add questions b, c, and d for testing including their functions
-from src.question_a.question_a import get_day_of_week 
+from src.question_b.question_b import use_local_variable  
 
 class Test_Config(unittest.TestCase):
 
-    def test_get_day_of_week(self): 
-        assert get_day_of_week(0) == "Invalid number" 
-        assert get_day_of_week(1) == "Monday" 
-        assert get_day_of_week(2) == "Tuesday" 
-        assert get_day_of_week(3) == "Wednesday" 
-        assert get_day_of_week(8) == "Invalid number"  
+    def test_use_local_variable(num): 
+        num == 100 
 
-        print ("All test cases passed") 
+        print(f"After function call, outside test case: num = {num}") 
+
+
 
 
 

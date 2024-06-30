@@ -2,14 +2,20 @@
 import unittest
 
 #follow this example to add questions b, c, and d for testing including their functions
-from src.question_b.question_b import use_local_variable  
+from src.question_c.question_c import get_bonus_pay_amount
 
-class Test_Config(unittest.TestCase):
+class Test_Config(unittest.TestCase): 
 
-    def test_use_local_variable(num): 
-        num == 100 
+    def test_get_bonus_pay_amount(self): 
+        assert get_bonus_pay_amount(-1) == 'Invalid argument' 
+        assert get_bonus_pay_amount(200) == 10 
+        assert get_bonus_pay_amount(600) == 36 
+        assert get_bonus_pay_amount(1000) == 70 
+        assert get_bonus_pay_amount(1500) == 120 
+        assert get_bonus_pay_amount(2000) == 'Invalid argument'
 
-        print(f"After function call, outside test case: num = {num}") 
+
+     
 
 
 

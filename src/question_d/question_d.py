@@ -9,4 +9,4 @@ def get_person_category(age):
     elif age < 20: 
         return "teenager" 
     else: 
-        return "adult" 
+        return "adult"
